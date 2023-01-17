@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "text":"good",
+        "type": "button"
+    },
+    {
+        "id": "2",
+        "text":"neutral",
+        "type": "button"
+    },
+    {
+        "id": "3",
+        "text":"bad",
+        "type": "button"
+    }
+]
