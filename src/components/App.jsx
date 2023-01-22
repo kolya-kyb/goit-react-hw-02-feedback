@@ -15,28 +15,19 @@ state = {
   }
 
   handleClick = (txt) =>{
-  
-    this.setState((prevState )=>  ({[txt]: prevState[txt] +1}))
+    this.setState((prevState)=>  ({[txt]: prevState[txt] +1}))
   }
 
-  countTotalFeedback() {
+  countTotalFeedback()  {
    return Object.values(this.state).reduce((acc, value) => acc + value, 0);
     }
     positivePercentage() {
-        return Math.floor((this.state.good * 100) / this.countTotalFeedback())
+        return((this.state.good * 100) / this.countTotalFeedback()).toFixed(2)
     }
 
 render () {
     const {good, neutral, bad} = this.state;
-    // const {buttons} = this.props;
-    // const statsValues = Object.values(this.state);
-    // const total = statsValues.reduce((acc, value) => acc + value, 0);
-    // const positivePercentage = Math.floor((good * 100) / total);
-    // console.log(this.state)
-    // const {statistics} = this.props;
-
-    
-    //   const statisticsItems =statistics.map(({id,text}) => <StatisticsItem key={id}><span>{text}</span> <span>{}</span> </StatisticsItem>);     
+   
     return (
         <>
        <Section title="Please leave feedback">
